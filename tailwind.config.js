@@ -20,7 +20,7 @@ export default {
                     3: "#ADA8C3",
                     4: "#757185",
                     6: "#252134",
-                    8: "#0E0C15"
+                    8: "#0E0C15" //bg color
                 },
             },
             fontFamily: {

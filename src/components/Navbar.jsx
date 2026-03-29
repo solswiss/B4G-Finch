@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import Hamburger from 'hamburger-react';
+import DarkModeToggle from "./lightModeToggle";
 
 import { background, openai } from "../assets";
 import Button from "./Button";
@@ -42,8 +43,9 @@ const navigation = [
     },
 ];
 
-const Header = () => {
+export default function Header() {
     const pathname = useLocation();
+    const [lightMode, setLightMode] = useState(false);
     const [openNavigation, setOpenNavigation] = useState(false);
 
     const toggleNavigation = () => {
@@ -86,7 +88,7 @@ const Header = () => {
                         ))}
                     </div>
                 </nav>
-
+                <DarkModeToggle mode={lightMode} onClick={() => setLightMode(!lightMode)}/>
                 <a className="hidden md:flex" href="#login">
                     Login
                 </a>
@@ -97,5 +99,3 @@ const Header = () => {
         </div>
     );
 };
-
-export default Header;
