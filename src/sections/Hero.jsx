@@ -8,7 +8,7 @@ const Hero = () => {
     const parallaxRef = useRef(null);
 
     return (
-        <Section className="pt-[12rem] -mt-[5.25rem]" crosses crossesOffset="lg:translate-y-[5.25rem]" customPaddings id="hero">
+        <Section className="pt-[12rem] -mt-[5.25rem]" customPaddings id="hero">
             <div className="container relative" ref={parallaxRef}>
                 <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
                     <h1 className="h1 mb-6">
@@ -26,10 +26,6 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-
-            <div className="hidden absolute top-[55.25rem] left-10 right-10 h-0.25 bg-n-6 pointer-events-none xl:block" />
-            <PlusSvg className="hidden absolute top-[54.9375rem] left-[2.1875rem] z-2 pointer-events-none xl:block" />
-            <PlusSvg className="hidden absolute top-[54.9375rem] right-[2.1875rem] z-2 pointer-events-none xl:block" />
         </Section>
     );
 };

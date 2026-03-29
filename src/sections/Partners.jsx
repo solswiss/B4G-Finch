@@ -34,11 +34,11 @@ const sponsors = [
 
 const Partners = () => {
     return (
-        <Section id="partners" crosses>
-            <div className="hidden relative z-10 mt-20 lg:block">
+        <Section id="partners">
+            <div className="hidden relative z-10 mt-20 md:block">
                 <h5 className="tagline mb-6 text-center text-white/50">Thank you to our sponsors</h5>
                 
-                <ul className="w-fit max-w-full flex flex-row justify-around items-center gap-5 mx-auto">
+                <ul className="w-fit max-w-full flex flex-row justify-around items-center gap-7 lg:gap-12 mx-auto">
                     {sponsors.map((sponsor, index) => (
                         <li className="flex items-center flex-0 h-[8.5rem]" key={index}>
                             <img className="" width={sponsor.width} height={sponsor.height} alt={sponsor.title} src={sponsor.icon} />

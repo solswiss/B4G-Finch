@@ -3,13 +3,13 @@ const Button = ({ className, href, onClick, children, white }) => {
     const classes = `button text-center relative inline-flex items-center justify-center overflow-hidden group transition-colors ${white ? "text-n-8 bg-white" : "text-white"} ${className || ""}`;
 
     const renderedButton = (
-        <button className={`${classes} ${white ? '' : 'border border-white'}`} onClick={onClick}>
+        <button className={`${classes} ${white ? '' : 'border border-n-6'}`} onClick={onClick}>
             <span className={`relative z-10 px-7 py-4 ${white ? '' : 'text-white'}`}>{children}</span>
         </button>
     );
 
     const renderedLink = (
-        <a href={href} className={`${classes} ${white ? '' : 'border border-white'}`}>
+        <a href={href} className={`${classes} ${white ? '' : 'border border-n-6'}`}>
             <span className={`relative w-full px-7 py-4 ${white ? '' : 'text-white'}`}>{children}</span>
         </a>
     );
