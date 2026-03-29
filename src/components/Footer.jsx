@@ -30,8 +30,8 @@ const socials = [
 
 const Links = () => {
     return (
-        <div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mx-auto text-sm p-7">
+        <div className="lg:w-[50%]">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mx-auto text-sm">
                 <div>
                     <h2 className="h6">Solution</h2>
                     <ul>
@@ -62,11 +62,13 @@ const Links = () => {
 
 const Footer = () => {
     return (
-        <Section crosses className="!px-0 !py-10 bg-none">
-            <Email />
-            <Links />
-            <hr className="mx-7" />
-            <div className="p-7 flex flex-col sm:justify-betweenl justify-end items-start gap-2 max-sm:flex-col">
+        <Section className="!py-10 bg-none px-7">
+            <div className="flex flex-col gap-7 lg:flex-row-reverse justify-between w-full lg:items-center pb-7 lg:gap-0">
+                <Email />
+                <Links />
+            </div>
+            <hr />
+            <div className="py-7 flex flex-col sm:justify-betweenl justify-end items-start gap-2 max-sm:flex-col">
                 <div className="w-full flex flex-co">
                     <ul className="flex justify-around flex-wrap gap-4">
                         <li><a href="#"><FaDiscord className="h-7 w-7"></FaDiscord></a></li>

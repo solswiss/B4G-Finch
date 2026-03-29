@@ -1,3 +1,7 @@
+// Finch
+export { default as favicon } from './finch/finch-favicon.png';
+export { default as logo } from './finch/finch-logo.png';
+
 // Hero Section
 
 // Partners Section
