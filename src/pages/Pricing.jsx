@@ -70,7 +70,7 @@ const Pricing = () => {
     return (
         <Section id="pricing" className="overflow-hidden dark:bg-n-8">
             <div className="container relative z-2">
-                <Heading tag="Take flight with Finch" title="Get the plan best suited for your aspirations." />
+                <Heading className="font-display" tag="Take flight with Finch" title="Get the plan best suited for your aspirations." />
 
                 <div className="relative">
                     <div className="flex gap-[1rem] max-lg:flex-wrap">
@@ -82,7 +82,7 @@ const Pricing = () => {
                                 </div>
                                 <div className="p-6">
                                     <p className="h5 text-white dark:text-white"><span className="h3 mb-2 text-white dark:text-white">${item.price}</span> per month</p>
-                                    <Button className="w-full my-4 bg-color-5" href={extensionLink}>
+                                    <Button className="w-full my-4 bg-color-5 text-white" href={extensionLink}>
                                         Download for Chrome {/**FIX light mode borken */}
                                     </Button>
                                     <ul className="text-white/70 dark:text-white/70">

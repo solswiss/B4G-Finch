@@ -11,7 +11,7 @@ const Hero = () => {
         <Section className="pt-[12rem] -mt-[5.25rem]" customPaddings id="hero">
             <div className="container relative" ref={parallaxRef}>
                 <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-                    <h1 className="h1 mb-6 text-color-1">
+                    <h1 className="font-display h1 mb-6 text-color-6">
                         Turn Applications Into <span className="text-color-3">Interviews</span>
                     </h1>
                     <p className="body-1 max-w-3xl mx-auto mb-6 text-color-6 lg:mb-8">Stop guessing and start applying with strategy. Finch helps you target the right internships, tailor your applications intelligently, and increase your interview rate without spending more time applying</p>

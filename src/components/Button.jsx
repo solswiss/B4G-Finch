@@ -4,13 +4,13 @@ const Button = ({ className, href, onClick, children, white }) => {
 
     const renderedButton = (
         <button className={`${classes} ${white ? '' : 'border border-n-8 dark:border-white/20'}`} onClick={onClick}>
-            <span className={`relative z-10 px-7 py-4 ${white ? '' : 'text-n-8 dark:text-white'}`}>{children}</span>
+            <span className={`relative z-10 px-7 py-4 ${white ? '' : (className && className.includes('text-') ? '' : 'text-n-8 dark:text-white')}`}>{children}</span>
         </button>
     );
 
     const renderedLink = (
         <a href={href} className={`${classes} ${white ? '' : 'border border-n-8 dark:border-white/20'}`}>
-            <span className={`relative w-full px-7 py-4 ${white ? '' : 'text-n-8 dark:text-white'}`}>{children}</span>
+            <span className={`relative w-full px-7 py-4 ${white ? '' : (className && className.includes('text-') ? '' : 'text-n-8 dark:text-white')}`}>{children}</span>
         </a>
     );
 

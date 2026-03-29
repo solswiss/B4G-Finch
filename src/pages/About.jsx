@@ -6,14 +6,14 @@ const About = () => {
     return (
         <>
         <Section id="whatIs" className="overflow-hidden place-items-center dark:bg-n-8">
-            <Heading tag="What is Finch"/>
-                <p className="text-center max-w-4xl text-lg dark:text-white/80">Finch (Easy Apply) is an intentional internship platform built for engineering, computer science, and high-volume student applicants who are tired of mass applying with little return. Instead of helping students submit more applications, Finch optimizes for interview probability — matching them to high-signal roles, tailoring their materials, and integrating structured networking to increase recruiter visibility.
+            <Heading className="font-display" title="What is Finch?"/>
+                <p className="text-center max-w-4xl text-lg dark:text-white/80">Finch is an intentional internship platform built for engineering, computer science, and high-volume student applicants who are tired of mass applying with little return. Instead of helping students submit more applications, Finch optimizes for interview probability — matching them to high-signal roles, tailoring their materials, and integrating structured networking to increase recruiter visibility.
                 Finch streamlines the internship application process by combining AI-powered resume tailoring with automated form-filling.</p>
                 <br/>
                 <p className="text-center max-w-4xl text-lg dark:text-white/80">Users sign up, connect their LinkedIn profile, and the system generates a rich candidate profile. When browsing job postings on major ATS platforms (Greenhouse, Lever, Workday), the Chrome extension detects the application, generates a tailored resume and cover letter in seconds, and autofills the entire form, turning what takes 20–30 minutes into under 60 seconds.</p>
         </Section>
         <Section id="how" className="overflow-hidden place-items-center dark:bg-n-8">
-            <Heading tag="How it Started"/>
+            <Heading className="font-display" tag="Origin" title="How it Started"/>
                 <p className="text-center max-w-4xl text-lg dark:text-white/80">Despite sending mass internship applications to many companies, one of the founding members, Carlos, found that 
                     he wasn't recieving any responses. The current system involved putting a lot of time for 
                     little or no return, so he thought of a more efficient way to approach the process. He began building a functional backend that
@@ -21,7 +21,7 @@ const About = () => {
                 <br/>
         </Section>
         <Section id="founders" className="overflow-hidden place-items-center dark:bg-n-8">
-            <Heading tag="Founding Members"/>
+            <Heading className="font-display text-color-3" tag="Founding Members" title="The Team"/>
                 <div className="flex horizontally-centered gap-4 dark:text-white">
                     <div className="place-items-center">
                         <img width={100} height={300} alt={"Carlos Luna Pena"} src={founder1} />
