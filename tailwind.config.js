@@ -2,25 +2,27 @@
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
+    darkMode: "class",
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     safelist: [{ pattern: /rotate-/ }],
+    
     theme: {
         extend: {
             colors: {
                 color: {
-                    1: "#AC6AFF",
-                    2: "#FFC876",
-                    3: "#FF776F",
-                    4: "#7ADB78",
-                    5: "#858DFF",
-                    6: "#FF98E2",
+                    1: "#24364C",
+                    2: "#F15A2A",
+                    3: "#FEA844",
+                    4: "#2AB7B3",
+                    5: "#FFD058",
+                    6: "#43556C",
                 },
                 n: {
                     2: "#CAC6DD",
                     3: "#ADA8C3",
                     4: "#757185",
                     6: "#252134",
-                    8: "#0E0C15" //bg color
+                    8: "#0E0C15" 
                 },
             },
             fontFamily: {

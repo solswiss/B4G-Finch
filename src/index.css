@@ -60,7 +60,7 @@
 :root {
     --font-display: "Gokschil", sans-serif;
     --font-grotesk: "Garute", sans-serif;
-    color-scheme: dark;
+    color-scheme: light dark;
 }
 
 html {
@@ -69,7 +69,7 @@ html {
 
 @layer base {
     body {
-        @apply font-grotesk bg-n-8 text-white text-base;
+        @apply font-grotesk bg-white text-n-8 text-base dark:bg-n-8 dark:text-white transition-colors;
     }
 }
 

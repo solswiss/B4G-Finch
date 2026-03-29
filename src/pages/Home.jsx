@@ -10,8 +10,8 @@ const Home = () => {
             <Hero />
             <Partners/>
             <Benefits/>
-            <Flow/>
-            <Features/>
+            {/**<Flow/>
+            <Features/>*/}
         </div>
     );
 };

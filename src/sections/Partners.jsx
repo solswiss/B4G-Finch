@@ -34,9 +34,9 @@ const sponsors = [
 
 const Partners = () => {
     return (
-        <Section id="partners">
+        <Section id="partners" className="bg-n-3 dark:bg-n-8">
             <div className="hidden relative z-10 mt-20 md:block">
-                <h5 className="tagline mb-6 text-center text-white/50">Thank you to our sponsors</h5>
+                <h5 className="tagline mb-6 text-center text-white/50 dark:text-white/50">Thank you to our sponsors</h5>
                 
                 <ul className="w-fit max-w-full flex flex-row justify-around items-center gap-7 lg:gap-12 mx-auto">
                     {sponsors.map((sponsor, index) => (

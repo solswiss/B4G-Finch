@@ -68,24 +68,24 @@ const secondaryPricing = [
 
 const Pricing = () => {
     return (
-        <Section id="pricing" className="overflow-hidden">
+        <Section id="pricing" className="overflow-hidden dark:bg-n-8">
             <div className="container relative z-2">
                 <Heading tag="Take flight with Finch" title="Get the plan best suited for your aspirations." />
 
                 <div className="relative">
                     <div className="flex gap-[1rem] max-lg:flex-wrap">
                         {primaryPricing.map((item, i) => (
-                            <div key={i} className="w-[19rem] max-lg:w-full h-full bg-n-8 border border-n-6 flex flex-col lg:w-auto">
-                                <div className="p-6 border-b border-n-6">
-                                    <p className="h5">{item.title}</p>
-                                    <p className="">{item.description}</p>
+                            <div key={i} className="w-[19rem] max-lg:w-full h-full bg-n-8 border border-n-6 flex flex-col lg:w-auto dark:bg-white/5 dark:border-white/20">
+                                <div className="p-6 border-b border-n-6 dark:border-white/20">
+                                    <p className="h5 text-white dark:text-white">{item.title}</p>
+                                    <p className="text-white/70 dark:text-white/70">{item.description}</p>
                                 </div>
                                 <div className="p-6">
-                                    <p className="h5"><span className="h3 mb-2">${item.price}</span> per month</p>
-                                    <Button className="w-full my-4" href={extensionLink} white>
-                                        Download for Chrome
+                                    <p className="h5 text-white dark:text-white"><span className="h3 mb-2 text-white dark:text-white">${item.price}</span> per month</p>
+                                    <Button className="w-full my-4 bg-color-5" href={extensionLink}>
+                                        Download for Chrome {/**FIX light mode borken */}
                                     </Button>
-                                    <ul className="">
+                                    <ul className="text-white/70 dark:text-white/70">
                                         <li>{item.monthly} apps/month</li>
                                         <li className="text-sm">{item.cycle[0]}-{item.cycle[1]} apps per cycle</li>
                                         <li className="text-sm">Cost to Finch: ~${item.cost}</li>
