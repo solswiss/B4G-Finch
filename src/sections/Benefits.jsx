@@ -53,18 +53,14 @@ const benefits = [
 
 const Benefits = () => {
     return (
-        <Section id="features">
+        <Section id="benefits">
             <div className="container relative z-2">
                 <Heading className="md:max-w-md lg:max-w-2xl" title="Chat Smarter, Not Harder with OpenAI" />
 
                 <div className="flex flex-wrap gap-10 mb-10">
                     {benefits.map((item, i) => (
                         <div
-                            className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] group"
-                            style={{
-                                backgroundImage: `url(${item.backgroundUrl})`,
-                            }}
-                            key={i}
+                            className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] group" key={i}
                         >
                             <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem]">
                                 <h5 className="h5 mb-5">{item.title}</h5>

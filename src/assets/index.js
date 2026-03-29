@@ -3,17 +3,13 @@ export { default as curve } from './hero/curve.png';
 export { default as robot } from './hero/robot.jpg';
 export { default as heroBackground } from './hero/hero-background.jpg';
 
-// Collaboration Section
-export { default as curve1 } from './collaboration/curve-1.svg';
-export { default as curve2 } from './collaboration/curve-2.svg';
-export { default as discord } from './collaboration/discord.png';
-export { default as figma } from './collaboration/figma.png';
-export { default as framer } from './collaboration/framer.png';
-export { default as notion } from './collaboration/notion.png';
-export { default as photoshop } from './collaboration/photoshop.png';
-export { default as protopie } from './collaboration/protopie.png';
-export { default as raindrop } from './collaboration/raindrop.png';
-export { default as slack } from './collaboration/slack.png';
+// Partners Section
+export { default as curve1 } from './partners/curve-1.svg';
+export { default as curve2 } from './partners/curve-2.svg';
+export { default as aggiex } from './partners/logo_light_aggiex.png';
+export { default as aggiexDark } from './partners/logo_dark_aggiex.png';
+export { default as aggiesCreate } from './partners/logo_aggiescreate.png';
+export { default as meloy } from './partners/logo_meloy.png';
 
 // Services Section
 export { default as service1 } from './services/service-1.png';
@@ -61,6 +57,7 @@ export { default as telegram } from './socials/telegram.svg';
 export { default as twitter } from './socials/twitter.svg';
 
 // General Imports
+export const extensionLink = "https://chromewebstore.google.com/detail/tailored-resume-autofill/pmmjgacnckobpphmpekbnnphafecfbdk";
 export { default as openai } from './openai.svg';
 export { default as check } from './check.svg';
 export { default as check2 } from './check-02.svg';
