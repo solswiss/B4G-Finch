@@ -9,6 +9,7 @@ import Careers from "./pages/Careers";
 import Help from "./pages/Help";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import Pricing from "./pages/Pricing";
 
 const App = () => {
     return (
@@ -18,6 +19,7 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/product" element={<Product />} />
+                    <Route path="/pricing" element={<Pricing />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/careers" element={<Careers />} />

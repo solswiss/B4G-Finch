@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import Hamburger from 'hamburger-react';
-import DarkModeToggle from "./lightModeToggle";
+import DarkModeToggle from "./DarkModeToggle";
 
 import { logo } from "../assets";
 import Button from "./Button";
@@ -45,7 +45,7 @@ const navigation = [
 
 export default function Header() {
     const pathname = useLocation();
-    const [lightMode, setLightMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(false);
     const [openNavigation, setOpenNavigation] = useState(false);
 
     const toggleNavigation = () => {
@@ -88,13 +88,14 @@ export default function Header() {
                         ))}
                     </div>
                 </nav>
-                <DarkModeToggle mode={lightMode} onClick={() => setLightMode(!lightMode)}/>
-                <a className="hidden md:flex" href="#login">
-                    Login
-                </a>
-
-                <div className="md:hidden"><Hamburger toggled={openNavigation} toggle={toggleNavigation}>
-                </Hamburger></div>
+                <div className="flex justify-self-end align-center items-center">
+                    <DarkModeToggle mode={darkMode} onClick={() => setDarkMode(!darkMode)}/>
+                    <a className="hidden md:flex" href="#login">
+                        Login
+                    </a>
+                    <div className="md:hidden"><Hamburger toggled={openNavigation} toggle={toggleNavigation}>
+                    </Hamburger></div>
+                </div>
             </div>
         </div>
     );

@@ -28,9 +28,9 @@ export { default as benefitIcon4 } from './benefits/icon-4.svg';
 export { default as benefitImage2 } from './benefits/image-2.png';
 
 // about section
-export {default as founder1} from './Carlos-Luna-Headshot.jpeg';
-export {default as founder2} from './Jose-Tirado-Headshot.jpeg';
-export {default as founder3} from './Nicanor-Garza-Zazueta-headshot.png';
+export {default as founder1} from './about/Carlos-Luna-Headshot.jpeg';
+export {default as founder2} from './about/Jose-Tirado-Headshot.jpeg';
+export {default as founder3} from './about/Nicanor-Garza-Zazueta-headshot.png';
 
 // General Imports
 export const extensionLink = "https://chromewebstore.google.com/detail/tailored-resume-autofill/pmmjgacnckobpphmpekbnnphafecfbdk";
