@@ -1,40 +1,14 @@
 // Hero Section
-export { default as curve } from './hero/curve.png';
-export { default as robot } from './hero/robot.jpg';
-export { default as heroBackground } from './hero/hero-background.jpg';
 
 // Partners Section
-export { default as curve1 } from './partners/curve-1.svg';
-export { default as curve2 } from './partners/curve-2.svg';
 export { default as aggiex } from './partners/logo_light_aggiex.png';
 export { default as aggiexDark } from './partners/logo_dark_aggiex.png';
 export { default as aggiesCreate } from './partners/logo_aggiescreate.png';
 export { default as meloy } from './partners/logo_meloy.png';
 
 // Services Section
-export { default as service1 } from './services/service-1.png';
-export { default as service2 } from './services/service-2.png';
-export { default as service3 } from './services/service-3.png';
 
 // Pricing Section
-export { default as lines } from './pricing/lines.svg';
-export { default as stars } from './pricing/stars.svg';
-
-// Roadmap Section
-export { default as coins } from './roadmap/coins.png';
-export { default as done } from './roadmap/done.svg';
-export { default as hero } from './roadmap/hero.png';
-export { default as roadmap1 } from './roadmap/image-1.png';
-export { default as roadmap2 } from './roadmap/image-2.png';
-export { default as roadmap3 } from './roadmap/image-3.png';
-export { default as roadmap4 } from './roadmap/image-4.png';
-export { default as undone } from './roadmap/undone.svg';
-
-// Notification Section
-export { default as notification1 } from './notification/image-1.png';
-export { default as notification2 } from './notification/image-2.png';
-export { default as notification3 } from './notification/image-3.png';
-export { default as notification4 } from './notification/image-4.png';
 
 // Benefits Section
 export { default as benefitCard1 } from './benefits/card-1.svg';
@@ -48,13 +22,6 @@ export { default as benefitIcon2 } from './benefits/icon-2.svg';
 export { default as benefitIcon3 } from './benefits/icon-3.svg';
 export { default as benefitIcon4 } from './benefits/icon-4.svg';
 export { default as benefitImage2 } from './benefits/image-2.png';
-
-// Socials Section
-export { default as discordBlack } from './socials/discord.svg';
-export { default as facebook } from './socials/facebook.svg';
-export { default as instagram } from './socials/instagram.svg';
-export { default as telegram } from './socials/telegram.svg';
-export { default as twitter } from './socials/twitter.svg';
 
 // General Imports
 export const extensionLink = "https://chromewebstore.google.com/detail/tailored-resume-autofill/pmmjgacnckobpphmpekbnnphafecfbdk";

@@ -24,9 +24,8 @@ export default {
                 },
             },
             fontFamily: {
-                sans: ["var(--font-sora)", ...fontFamily.sans],
-                code: "var(--font-code)",
-                grotesk: "var(--font-grotesk)",
+                display: ["var(--font-display)", ...fontFamily.sans],
+                grotesk: ["var(--font-grotesk)", ...fontFamily.sans],
             },
             letterSpacing: {
                 tagline: ".15em",

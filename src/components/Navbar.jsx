@@ -1,22 +1,32 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
+import Hamburger from 'hamburger-react';
 
 import { background, openai } from "../assets";
 import Button from "./Button";
-import MenuSvg from "../assets/svg/MenuSvg";
 import { useState } from "react";
 
 const navigation = [
     {
         id: "0",
-        title: "Features",
-        url: "#features",
+        title: "Product",
+        url: "/product",
     },
     {
         id: "1",
         title: "Pricing",
-        url: "#pricing",
+        url: "/pricing",
+    },
+    {
+        id: "2",
+        title: "About",
+        url: "/about",
+    },
+    {
+        id: "3",
+        title: "Blog",
+        url: "/blog",
     },
     {
         id: "4",
@@ -54,57 +64,35 @@ const Header = () => {
     };
 
     return (
-        <div className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"}`}>
-            <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
+        <div className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 md:bg-n-8/90 md:backdrop-blur-sm ${openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"}`}>
+            <div className="flex justify-between items-center px-6 md:justify-around md:px-7.5 xl:px-10 max-md:py-4">
                 <HashLink to="/#hero" className="block w-[12rem] xl:mr-8">
                     <img src={openai} width={190} height={40} alt="Finch" />
                 </HashLink>
 
-                <nav className={`${openNavigation ? "flex" : "hidden"} fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}>
-                    <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
+                <nav className={`${openNavigation ? "flex" : "hidden"} fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 md:static md:flex md:mx-auto md:bg-transparent`}>
+                    <div className="relative z-2 flex flex-col items-end align-start justify-start ml-auto px-7 md:flex-row">
                         {navigation.map((item) => (
-                            <a
+                            <Link
                                 key={item.id}
-                                href={item.url}
+                                to={item.url}
                                 onClick={handleClick}
-                                className={`block relative font-code text-2xl uppercase text-white transition-colors hover:text-color-1 ${item.onlyMobile ? "lg:hidden" : ""} px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-                                    item.url === pathname.hash ? "z-2 lg:text-white" : "lg:text-white/50"
-                                } lg:leading-5 lg:hover:text-white xl:px-12`}
+                                className={`block relative text-2xl text-white transition-colors hover:text-color-1 ${item.onlyMobile ? "md:hidden" : ""} my-2 ${
+                                    item.url === pathname.hash ? "z-2 md:text-white" : "md:text-white/50"
+                                } md:leading-5 md:hover:text-white xl:px-12`}
                             >
                                 {item.title}
-                            </a>
+                            </Link>
                         ))}
-                    </div>
-
-                    <div className="absolute inset-0 pointer-events-none lg:hidden">
-                        <div className="absolute inset-0 opacity-[.03]">
-                            <img className="w-full h-full object-cover" src={background} width={688} height={953} alt="" />
-                        </div>
-
-                        <div className="absolute top-1/2 left-1/2 w-[51.375rem] aspect-square border border-n-2/10 rounded-full -translate-x-1/2 -translate-y-1/2">
-                            <div className="absolute top-1/2 left-1/2 w-[36.125rem] aspect-square border border-n-2/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-                            <div className="absolute top-1/2 left-1/2 w-[23.125rem] aspect-square border border-n-2/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-                        </div>
-
-                        <div className="absolute top-0 left-5 w-0.25 h-full bg-n-6"></div>
-                        <div className="absolute top-0 right-5 w-0.25 h-full bg-n-6"></div>
-
-                        <div className="absolute top-[4.4rem] left-16 w-3 h-3 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full"></div>
-                        <div className="absolute top-[12.6rem] right-16 w-3 h-3 bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full"></div>
-                        <div className="absolute top-[26.8rem] left-12 w-6 h-6 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] rounded-full"></div>
                     </div>
                 </nav>
 
-                <a href="#signup" className="button hidden mr-8 text-white/50 transition-colors hover:text-white lg:block">
-                    New account
+                <a className="hidden md:flex" href="#login">
+                    Login
                 </a>
-                <Button className="hidden lg:flex" href="#login">
-                    Sign in
-                </Button>
 
-                <Button className="ml-auto lg:hidden" onClick={toggleNavigation}>
-                    <MenuSvg openNavigation={openNavigation} />
-                </Button>
+                <div className="md:hidden"><Hamburger toggled={openNavigation} toggle={toggleNavigation}>
+                </Hamburger></div>
             </div>
         </div>
     );

@@ -1,4 +1,4 @@
-import { curve1, curve2, aggiex, aggiesCreate, meloy } from "../assets";
+import { aggiex, aggiesCreate, meloy } from "../assets";
 import Button from "../components/Button";
 import Section from "../components/Section";
 

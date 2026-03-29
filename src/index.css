@@ -1,15 +1,65 @@
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
+@font-face {
+    font-family: 'Gokschil';
+    src: url('src/assets/fonts/Gokschil.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RCL';
+    src: url('src/assets/fonts/RCLBlackOne.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Garute';
+    src: url('src/assets/fonts/Garute-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LilGrotesk';
+    src: url('src/assets/fonts/LilGrotesk-Black.otf');
+    font-weight: bolder;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LilGrotesk';
+    src: url('src/assets/fonts/LilGrotesk-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LilGrotesk';
+    src: url('src/assets/fonts/LilGrotesk-Medium.otf');
+    font-weight: medium;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LilGrotesk';
+    src: url('src/assets/fonts/LilGrotesk-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LilGrotesk';
+    src: url('src/assets/fonts/LilGrotesk-Thin.otf');
+    font-weight: thin;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LilGrotesk';
+    src: url('src/assets/fonts/LilGrotesk-Light.otf');
+    font-weight: light;
+    font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-    --font-sora: "Sora", sans-serif;
-    --font-code: "Source Code Pro", monospace;
-    --font-grotesk: "Space Grotesk", sans-serif;
+    --font-display: "Gokschil", sans-serif;
+    --font-grotesk: "Garute", sans-serif;
     color-scheme: dark;
 }
 
@@ -19,7 +69,7 @@ html {
 
 @layer base {
     body {
-        @apply font-sans bg-n-8 text-white text-base;
+        @apply font-grotesk bg-n-8 text-white text-base;
     }
 }
 
@@ -62,11 +112,11 @@ html {
 }
 
 .quote {
-    @apply font-code text-lg leading-normal;
+    @apply font-grotesk text-lg leading-normal;
 }
 
 .button {
-    @apply font-code text-xs font-bold uppercase tracking-wider;
+    @apply font-grotesk text-sm capitalize tracking-wider;
 }
 
 .tap-highlight-color {

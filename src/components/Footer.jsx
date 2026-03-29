@@ -2,33 +2,28 @@ import React from "react";
 import { Routes, Route, Link, Outlet } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import Section from "./Section";
-import { discordBlack, facebook, instagram, telegram, twitter } from "../assets";
+import { FaDiscord, FaTwitter, FaInstagram, FaFacebook } from 'react-icons/fa';
 import Email from "../components/Email";
 
 const socials = [
     {
         title: "Discord",
-        iconUrl: discordBlack,
+        icon: FaDiscord,
         url: "#",
     },
     {
         title: "Twitter",
-        iconUrl: twitter,
+        icon: FaTwitter,
         url: "#",
     },
     {
         title: "Instagram",
-        iconUrl: instagram,
-        url: "#",
-    },
-    {
-        title: "Telegram",
-        iconUrl: telegram,
+        icon: FaInstagram,
         url: "#",
     },
     {
         title: "Facebook",
-        iconUrl: facebook,
+        icon: FaFacebook,
         url: "#",
     },
 ];
@@ -36,7 +31,7 @@ const socials = [
 const Links = () => {
     return (
         <div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mx-auto text-sm p-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mx-auto text-sm p-7">
                 <div>
                     <h2 className="h6">Solution</h2>
                     <ul>
@@ -67,20 +62,20 @@ const Links = () => {
 
 const Footer = () => {
     return (
-        <Section crosses className="!px-0 !py-10 bg-[#f00]">
+        <Section crosses className="!px-0 !py-10 bg-none">
             <Email />
             <Links />
-            <div className="container flex sm:justify-between justify-center items-center gap-2 max-sm:flex-col">
-                <div className="w-full flex flex-col justify-end items-start">
-                    <ul className="flex justify-around flex-wrap">
-                        {socials.map((item, i) => (
-                            <a key={i} href={item.url} target="_blank" className="flex items-center justify-center w-10 h-10">
-                                <img src={item.iconUrl} width={16} height={16} alt={item.title} />
-                            </a>
-                        ))}
+            <hr className="mx-7" />
+            <div className="p-7 flex flex-col sm:justify-betweenl justify-end items-start gap-2 max-sm:flex-col">
+                <div className="w-full flex flex-co">
+                    <ul className="flex justify-around flex-wrap gap-4">
+                        <li><a href="#"><FaDiscord className="h-7 w-7"></FaDiscord></a></li>
+                        <li><a href="#"><FaTwitter className="h-7 w-7"></FaTwitter></a></li>
+                        <li><a href="#"><FaInstagram className="h-7 w-7"></FaInstagram></a></li>
+                        <li><a href="#"><FaFacebook className="h-7 w-7"></FaFacebook></a></li>
                     </ul>
                 </div>
-                <p className="caption text-n-4 lg:block">© {new Date().getFullYear()}. All rights reserved.</p>
+                <p className="caption text-white lg:block">© {new Date().getFullYear()}. All rights reserved.</p>
             </div>
         </Section>
     );
